@@ -1,0 +1,11 @@
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuSolver\bin\Debug\SudokuSolver.exe.config
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuSolver\bin\Debug\SudokuSolver.exe
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuSolver\bin\Debug\SudokuSolver.pdb
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.csproj.AssemblyReference.cache
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.Form1.resources
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.Properties.Resources.resources
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.csproj.GenerateResource.cache
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.csproj.CoreCompileInputs.cache
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.exe
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.pdb
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuSolver\obj\Debug\SudokuSolver.BoxControl.resources
