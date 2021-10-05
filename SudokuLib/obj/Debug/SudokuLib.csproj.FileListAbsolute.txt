@@ -1,0 +1,9 @@
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuLib\bin\Debug\SudokuLib.dll
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuLib\bin\Debug\SudokuLib.pdb
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuLib\obj\Debug\SudokuLib.csproj.AssemblyReference.cache
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuLib\obj\Debug\SudokuLib.csproj.CoreCompileInputs.cache
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuLib\obj\Debug\SudokuLib.dll
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuLib\obj\Debug\SudokuLib.pdb
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuLib\bin\Debug\SharedLib.dll
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuLib\bin\Debug\SharedLib.pdb
+C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SudokuLib\obj\Debug\SudokuLib.csproj.CopyComplete

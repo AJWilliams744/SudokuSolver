@@ -113,7 +113,7 @@ namespace SudokuSolver
             this.SolveBt.TabIndex = 7;
             this.SolveBt.Text = "Solve";
             this.SolveBt.UseVisualStyleBackColor = true;
-            this.SolveBt.Click += new System.EventHandler(this.SolveBt_Click);
+            //this.SolveBt.Click += new System.EventHandler(this.SolveBt_Click);
             // 
             // ValidBt
             // 

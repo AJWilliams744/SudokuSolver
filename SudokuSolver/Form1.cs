@@ -36,9 +36,15 @@ namespace SudokuSolver
         }
         #region Methods
 
-        private void UpdateCurrentSize(int size)
+        private void RefreshSudokuGrid(int size)
         {
-            
+            ClearSudoku();
+            RefreshInternalSudokuGrid(size);
+            RefreshExternalSudokuGrid();
+        }
+
+        private void RefreshInternalSudokuGrid(int size)
+        {      
 
             int width = BoxControl.width * size;
             int height = BoxControl.height * size;
@@ -46,99 +52,44 @@ namespace SudokuSolver
             FlowPanel.MaximumSize = new Size(width, height);
             FlowPanel.Size = new Size(width, height);
 
-            AddBoxes(size);
+            Grid = SudokuSolving.CreateTxtBoxGrid(size);
+            GridLines = SudokuSolving.CreateGridLines(width, height, size, FlowPanel.Location.X, FlowPanel.Location.Y);
 
-            AddHGrids(width, size, FlowPanel.Location.Y, FlowPanel.Location.X,2, true);
-            AddVGrids(height, size, FlowPanel.Location.X, FlowPanel.Location.Y,2, true);
-
-            AddHGrids(width, size, FlowPanel.Location.Y, FlowPanel.Location.X, 1, false);
-            AddVGrids(height, size, FlowPanel.Location.X, FlowPanel.Location.Y, 1, false);
         }
 
-        private void AddHGrids(int width, int size, int originalLocation, int fixedPoint, int thickness, bool outside)
-        {
-            size = (int)Math.Sqrt(size);
-            int gap = size * BoxControl.height;
+        private void RefreshExternalSudokuGrid()
+        {           
 
-            int start = 0;
-            if (!outside)
-            {
-                start = 1;
-                size = (int)Math.Pow(size, 2);
-                gap = BoxControl.height;
-            }
+            //Add all to screen
+            AddGrid();
+            AddGridLines();                    
 
-            for (var x = start; x <= size; x++)
-            {
-                int position = (gap * x) + originalLocation;
-
-                PictureBox p = CreateTextBox(new Point(fixedPoint + thickness, position), width, thickness);
-
-                GridLines.Add(p);
-                Controls.Add(p);
-
-                p.BringToFront();
-                
-            }
         }
-        private void AddVGrids(int height, int size, int originalLocation, int fixedPoint, int thickness, bool outside)
+
+        private void AddGridLines()
         {
-            size = (int)Math.Sqrt(size);
-            int gap = size * BoxControl.width;
-
-            int start = 0;
-            if (!outside)
+            foreach (var line in GridLines)
             {
-                start = 1;
-                size = (int)Math.Pow(size, 2);
-                gap = BoxControl.width;
-            }
-
-            for (var x = start; x <= size; x++)
-            {
-                int position = (gap * x) + originalLocation;
-
-                PictureBox p = CreateTextBox(new Point(position, fixedPoint + thickness), thickness, height);
-
-                GridLines.Add(p);
-                Controls.Add(p);
-
-                p.BringToFront();
-
+                Controls.Add(line);
+                line.BringToFront();
             }
         }
 
-        private PictureBox CreateTextBox(Point location, int width, int height)
+        private void AddGrid()
         {
-            PictureBox p = new PictureBox();
-            p.Location = location;
-            p.Width = width;
-            p.Height = height;
-            p.BackColor = Color.Black;
-            p.Margin = new Padding(0);
-            p.BringToFront();
-
-            return p;
-        }
-
-        private void AddBoxes(int size)
-        {
-            for (var x = 0; x < size; x++)
+            foreach (var gridList in Grid)
             {
-                AddRow(size);
+                foreach (var grid in gridList)
+                {
+                    FlowPanel.Controls.Add(grid);
+                }
             }
         }
-        private void AddRow(int size)
+
+        private void ClearSudoku()
         {
-            var newRow = new List<BoxControl>();
-            for (var x = 0; x < size; x++)
-            {
-                var box = new BoxControl();
-                FlowPanel.Controls.Add(box);
-                box.SendToBack();
-                newRow.Add(box);
-            }
-            Grid.Add(newRow);
+            FlowPanel.Controls.Clear();
+            ClearGridLines();
         }
 
         private void ClearGridLines() { 
@@ -154,20 +105,12 @@ namespace SudokuSolver
 
         private void clBt_Click(object sender, EventArgs e)
         {
-            FlowPanel.Controls.Clear();
-            ClearGridLines();
-
-            Grid = new List<List<BoxControl>>();
-            UpdateCurrentSize((int)Math.Pow((int)gridSizeAdj.Value, 2));
+            RefreshSudokuGrid((int)Math.Pow((int)gridSizeAdj.Value, 2));
         }
 
         private void gridSizeAdj_ValueChanged(object sender, EventArgs e)
         {
-            FlowPanel.Controls.Clear();
-            ClearGridLines();
-
-            Grid = new List<List<BoxControl>>();
-            UpdateCurrentSize((int)Math.Pow((int)gridSizeAdj.Value, 2));
+            RefreshSudokuGrid((int)Math.Pow((int)gridSizeAdj.Value, 2));
         }
         #endregion
 
@@ -182,12 +125,9 @@ namespace SudokuSolver
             IsValidTx.Visible = true;
             SolveBt.Visible = true;
 
-            UpdateCurrentSize(4);
-            FlowPanel.Controls.Clear();
-            Grid = new List<List<BoxControl>>();
-
-            ClearGridLines();
-            UpdateCurrentSize(4);
+            //Flush the data grid
+            RefreshSudokuGrid(4);
+            RefreshSudokuGrid(4);
         }
 
         private void ValidBt_Click(object sender, EventArgs e)
@@ -195,9 +135,5 @@ namespace SudokuSolver
             IsValidTx.Text = SudokuSolving.IsGridValid(Grid).ToString();
         }
 
-        private void SolveBt_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

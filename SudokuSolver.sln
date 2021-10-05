@@ -4,6 +4,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuSolver", "SudokuSolver\SudokuSolver.csproj", "{A32E6028-003E-4CDB-ABB6-4650043665F0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AEF369AB-BEE8-420D-8DC4-B4DD70EB6B48} = {AEF369AB-BEE8-420D-8DC4-B4DD70EB6B48}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuLib", "SudokuLib\SudokuLib.csproj", "{AEF369AB-BEE8-420D-8DC4-B4DD70EB6B48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib", "SharedLib\SharedLib.csproj", "{7B90458E-4205-44BC-A687-CD2CF61A2C97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{9C2F3FD8-DF28-4B83-B946-0E4435E1F2E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +24,18 @@ Global
 		{A32E6028-003E-4CDB-ABB6-4650043665F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A32E6028-003E-4CDB-ABB6-4650043665F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A32E6028-003E-4CDB-ABB6-4650043665F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEF369AB-BEE8-420D-8DC4-B4DD70EB6B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF369AB-BEE8-420D-8DC4-B4DD70EB6B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF369AB-BEE8-420D-8DC4-B4DD70EB6B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF369AB-BEE8-420D-8DC4-B4DD70EB6B48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B90458E-4205-44BC-A687-CD2CF61A2C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B90458E-4205-44BC-A687-CD2CF61A2C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B90458E-4205-44BC-A687-CD2CF61A2C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B90458E-4205-44BC-A687-CD2CF61A2C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C2F3FD8-DF28-4B83-B946-0E4435E1F2E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C2F3FD8-DF28-4B83-B946-0E4435E1F2E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C2F3FD8-DF28-4B83-B946-0E4435E1F2E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C2F3FD8-DF28-4B83-B946-0E4435E1F2E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

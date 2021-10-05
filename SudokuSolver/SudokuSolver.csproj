@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BoxControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="BoxControl.Designer.cs">
-      <DependentUpon>BoxControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,10 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SudokuSolving.cs" />
-    <EmbeddedResource Include="BoxControl.resx">
-      <DependentUpon>BoxControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +78,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharedLib\SharedLib.csproj">
+      <Project>{7b90458e-4205-44bc-a687-cd2cf61a2c97}</Project>
+      <Name>SharedLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SudokuLib\SudokuLib.csproj">
+      <Project>{aef369ab-bee8-420d-8dc4-b4dd70eb6b48}</Project>
+      <Name>SudokuLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
