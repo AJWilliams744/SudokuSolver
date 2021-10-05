@@ -80,7 +80,7 @@ namespace SudokuSolver
             var Gridlines = new List<PictureBox>();
 
             // Horizontal Lines.
-            AddDirectionalGrids(Gridlines, txtWidth, 2, 2, size, flowPanelY, flowPanelX, true, BoxControl.height);
+            AddDirectionalGrids(Gridlines, txtWidth, 2, 2, size, flowPanelY, flowPanelX, true, BoxControl.height);           
             AddDirectionalGrids(Gridlines, txtWidth, 1, 1, size, flowPanelY, flowPanelX, false, BoxControl.height);
 
             // Verticle Lines.
@@ -101,7 +101,7 @@ namespace SudokuSolver
             if (!outside)
             {
                 start = 1;
-                size = (int)Math.Pow(size, 2);
+                size = (int)Math.Pow(size, 2) - 1;
                 gap = boxDirection;
             }
 
@@ -137,7 +137,6 @@ namespace SudokuSolver
                 BackColor = Color.Black,
                 Margin = new Padding(0)
             };
-            p.BringToFront();
 
             return p;
         }

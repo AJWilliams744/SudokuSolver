@@ -6,3 +6,11 @@ C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SharedLib\bin\Debug
 C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SharedLib\bin\Debug\SharedLib.pdb
 C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SharedLib\obj\Debug\SharedLib.dll
 C:\Users\AWilliams\Documents\Dev1\Sudoku Solver\SudokuSolver\SharedLib\obj\Debug\SharedLib.pdb
+C:\Users\AWilliams\Documents\Dev1\Github\SudokuSolver\SharedLib\bin\Debug\SharedLib.dll
+C:\Users\AWilliams\Documents\Dev1\Github\SudokuSolver\SharedLib\bin\Debug\SharedLib.pdb
+C:\Users\AWilliams\Documents\Dev1\Github\SudokuSolver\SharedLib\obj\Debug\SharedLib.csproj.AssemblyReference.cache
+C:\Users\AWilliams\Documents\Dev1\Github\SudokuSolver\SharedLib\obj\Debug\SudokuSolver.BoxControl.resources
+C:\Users\AWilliams\Documents\Dev1\Github\SudokuSolver\SharedLib\obj\Debug\SharedLib.csproj.GenerateResource.cache
+C:\Users\AWilliams\Documents\Dev1\Github\SudokuSolver\SharedLib\obj\Debug\SharedLib.csproj.CoreCompileInputs.cache
+C:\Users\AWilliams\Documents\Dev1\Github\SudokuSolver\SharedLib\obj\Debug\SharedLib.dll
+C:\Users\AWilliams\Documents\Dev1\Github\SudokuSolver\SharedLib\obj\Debug\SharedLib.pdb

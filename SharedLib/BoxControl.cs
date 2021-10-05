@@ -36,6 +36,11 @@ namespace SudokuSolver
             return Int32.Parse(TBox.Text);
         }
 
+        public void SetValue(string x)
+        {
+            TBox.Text = x;
+        }
+
         public int GetSize()
         {
             return Size.Width;

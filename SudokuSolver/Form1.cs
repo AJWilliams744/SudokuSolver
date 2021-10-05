@@ -36,6 +36,8 @@ namespace SudokuSolver
         }
         #region Methods
 
+ 
+
         private void RefreshSudokuGrid(int size)
         {
             ClearSudoku();
@@ -128,7 +130,53 @@ namespace SudokuSolver
             //Flush the data grid
             RefreshSudokuGrid(4);
             RefreshSudokuGrid(4);
+
+            /// RUN WHEN TESTING SPECIFIC GRID
+
+            //ClearSudoku();
+            //int width = BoxControl.width * 4;
+            //int height = BoxControl.height * 4;
+
+            //var data = new List<String>();
+
+            //data.Add("1234");
+            //data.Add("3412");
+            //data.Add("2143");
+            //data.Add("4321");
+
+            //FlowPanel.MaximumSize = new Size(width, height);
+            //FlowPanel.Size = new Size(width, height);
+
+            //Grid = CreateMinSizeGrid(data);
+            //GridLines = SudokuSolving.CreateGridLines(width, height, 4, FlowPanel.Location.X, FlowPanel.Location.Y);
+            //RefreshExternalSudokuGrid();
+
+
+           
         }
+
+        //public List<List<BoxControl>> CreateMinSizeGrid(List<string> numberCollection)
+        //{
+        //    var grid = new List<List<BoxControl>>();
+
+        //    for (var y = 0; y < 4; y++)
+        //    {
+        //        var row = new List<BoxControl>();
+
+        //        for (var x = 0; x < 4; x++)
+        //        {
+        //            var b = new BoxControl();
+
+        //            b.SetValue(numberCollection[x][y].ToString());
+
+        //            row.Add(b);
+        //        }
+
+        //        grid.Add(row);
+        //    }
+
+        //    return grid;
+        //}
 
         private void ValidBt_Click(object sender, EventArgs e)
         {
